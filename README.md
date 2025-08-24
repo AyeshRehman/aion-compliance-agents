@@ -315,4 +315,3 @@ For support and questions:
 
 ---
 
-**Built with ❤️ using Agno Framework and Local AI**
