@@ -66,28 +66,6 @@ ollama pull mistral
 ollama serve
 ```
 
-### 4. Install Redis (Optional)
-```bash
-# Windows (via Chocolatey)
-choco install redis-64
-
-# macOS (via Homebrew)
-brew install redis
-
-# Linux (Ubuntu/Debian)
-sudo apt-get install redis-server
-
-# Start Redis
-redis-server
-```
-
-### 5. Setup Kafka (Optional)
-```bash
-# Download and start Kafka
-# Or use Docker:
-docker run -p 9092:9092 apache/kafka
-```
-
 ## Quick Start
 
 ### 1. Run Integration Test
@@ -168,7 +146,7 @@ aion-compliance-agents/
 ├── src/
 │   └── copilots/
 │       └── compliance/
-│           ├── shared/                 # Shared components
+│           ├── shared/                # Shared components
 │           │   ├── ollama_agno.py     # Ollama wrapper
 │           │   ├── kafka_handler.py   # Event handling
 │           │   └── models.py          # Database models
@@ -177,15 +155,15 @@ aion-compliance-agents/
 │           ├── compliance_summary/    # Report generation
 │           ├── compliance_chat/       # Chat interface
 │           └── audit_logging/         # Audit and monitoring
-├── data/                             # Data storage
-│   ├── chroma_db/                   # Vector database
-│   └── compliance.db                # SQLite database
-├── test_results/                    # Test outputs
-├── audit_reports/                   # Generated reports
-├── final_integration_test.py        # Complete system test
-├── chromadb_viewer.py              # Database viewer
-├── audit_report_viewer.py          # Report viewer
-└── requirements.txt                # Dependencies
+├── data/                              # Data storage
+│   ├── chroma_db/                     # Vector database
+│   └── compliance.db                  # Test outputs
+├── test_results/                      # Generated reports
+├── audit_reports/                     # Complete system test
+├── final_integration_test.py          # Database viewer
+├── chromadb_viewer.py                 # Report viewer
+├── audit_report_viewer.py             # Dependencies
+└── test_document.txt                
 ```
 
 ## Testing
@@ -255,16 +233,7 @@ print(response['response'])
    # Check if model is available
    ollama list
    ```
-
-2. **Character Encoding Errors**
-   - Ensure all files use UTF-8 encoding
-   - Arabic text support is built-in
-
-3. **Database Issues**
-   - System falls back to SQLite automatically
-   - Check `./data/compliance.db` exists
-
-4. **Redis Connection Failed**
+2. **Redis Connection Failed**
    - System works without Redis (reduced performance)
    - Start Redis: `redis-server`
 
