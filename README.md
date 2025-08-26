@@ -2,7 +2,7 @@
 
 A comprehensive multi-agent system for Saudi Arabian Monetary Authority (SAMA) compliance, built with the Agno framework and powered by local LLMs.
 
-## 🚀 Features
+## Features
 
 - **Document Ingestion Agent**: Processes and analyzes compliance documents
 - **KYC Validation Agent**: Validates Know Your Customer requirements
@@ -10,7 +10,7 @@ A comprehensive multi-agent system for Saudi Arabian Monetary Authority (SAMA) c
 - **Compliance Chat Agent**: Interactive chat interface for compliance queries
 - **Audit Logging Agent**: Complete audit trail and monitoring system
 
-## 🏗️ Architecture
+## Architecture
 
 ### Multi-Agent System
 - **5 Specialized Agents** working in coordination
@@ -29,7 +29,7 @@ A comprehensive multi-agent system for Saudi Arabian Monetary Authority (SAMA) c
 - **Message Queue**: Kafka (with mock fallback)
 - **Language**: Python 3.8+
 
-## 📋 Prerequisites
+## Prerequisites
 
 ### Required Services
 1. **Ollama** - Local LLM server
@@ -41,7 +41,7 @@ A comprehensive multi-agent system for Saudi Arabian Monetary Authority (SAMA) c
 pip install -r requirements.txt
 ```
 
-## 🛠️ Installation
+## Installation
 
 ### 1. Clone Repository
 ```bash
@@ -88,7 +88,7 @@ redis-server
 docker run -p 9092:9092 apache/kafka
 ```
 
-## 🚦 Quick Start
+## Quick Start
 
 ### 1. Run Integration Test
 ```bash
@@ -129,7 +129,7 @@ cd src/copilots/compliance/audit_logging
 python agno_audit_agent.py
 ```
 
-## 📊 Monitoring and Reports
+## Monitoring and Reports
 
 ### View ChromaDB Documents
 ```bash
@@ -141,7 +141,7 @@ python chromadb_viewer.py
 python audit_report_viewer.py
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 Create a `.env` file (optional):
@@ -161,7 +161,7 @@ Edit `src/copilots/compliance/agno_config.py` to customize:
 - Kafka topics
 - Cache settings
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 aion-compliance-agents/
@@ -188,7 +188,7 @@ aion-compliance-agents/
 └── requirements.txt                # Dependencies
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Run Full Integration Test
 ```bash
@@ -197,16 +197,16 @@ python final_integration_test.py
 
 ### Expected Output
 ```
-✅ ALL TESTS PASSED - SYSTEM FULLY OPERATIONAL!
-✅ Your SAMA Compliance Co-Pilot is ready for production demo!
+ALL TESTS PASSED - SYSTEM FULLY OPERATIONAL!
+Your SAMA Compliance Co-Pilot is ready for production demo!
 ```
 
 ### Test Results
 - Infrastructure: 5/5 components working
 - Agents: 5/5 agents operational
-- End-to-end workflow: ✅ Complete
+- End-to-end workflow: Complete
 
-## 📝 Usage Examples
+## Usage Examples
 
 ### Process a Document
 ```python
@@ -244,7 +244,7 @@ response = chat_agent.chat("What documents are required for SAMA compliance?", "
 print(response['response'])
 ```
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -275,7 +275,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -283,11 +283,11 @@ logging.basicConfig(level=logging.DEBUG)
 4. Run tests: `python final_integration_test.py`
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🏢 About SAMA Compliance
+## About SAMA Compliance
 
 This system helps organizations comply with Saudi Arabian Monetary Authority regulations through:
 - Automated document processing
@@ -296,14 +296,14 @@ This system helps organizations comply with Saudi Arabian Monetary Authority reg
 - Comprehensive audit trails
 - Real-time reporting capabilities
 
-## 📞 Support
+## Support
 
 For support and questions:
 - Create an issue on GitHub
 - Check the troubleshooting section
 - Review the integration test results
 
-## 🎯 Roadmap
+## Roadmap
 
 - [ ] Web UI interface
 - [ ] API endpoints
